@@ -1,38 +1,24 @@
-.App {
-  text-align: center;
+/* Font family css */
+
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+SC&family=Josefin+Sans&family=Marcellus+SC&family=Montserrat:wght@400;500&family=Raleway:wght@400;500&display=swap');
+.text-style {
+  font-family: 'Montserrat', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.text-Marcellus {
+  font-family: 'Marcellus SC', serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.text-Encode {
+  font-family: 'Encode Sans SC', sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.text-Raleway {
+  font-family: 'Raleway', sans-serif;
 }
 
-.App-link {
-  color: #61dafb;
+.text-Josefin {
+  font-family: 'Josefin Sans', sans-serif;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/* ended */

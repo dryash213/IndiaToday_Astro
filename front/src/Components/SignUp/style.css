@@ -1,0 +1,80 @@
+.btn {
+    padding: 10px 40px 10px 40px;
+    background-color: #0000;
+    color: #FF3333;
+    border: 1px solid #FF3333;
+    border-radius: 0;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.btn:hover {
+    background-color: #FF3333;
+    border: 1px solid #FF3333;
+}
+
+a {
+    text-decoration: none;
+    color: currentColor;
+}
+
+.invert-btn {
+    border: 1px solid white;
+    color: white;
+}
+
+.invert-btn:hover {
+    background-color: white;
+    border: 1px solid white;
+    color: #FF3333;
+}
+
+.auth-current-side {
+    background-color: white;
+}
+
+.auth-main-container {
+    border-radius: 20px;
+    background-color: #FF3333;
+    --tw-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.Signup-Header-Text {
+    font-size: 40px;
+}
+
+.signup-login-head-primary {
+    font-size: 50px;
+    color: white;
+}
+
+.signup-login-head-secondary {
+    font-size: 15px;
+    color: white;
+}
+
+.signup-login-mobile {
+    display: none;
+}
+
+.OTP_Input {
+    border: 0px;
+    border-radius: 0;
+    border-bottom: 1px solid black;
+}
+
+@media (max-width: 768px) {
+    .signup-login-side {
+        display: none;
+    }
+    .auth-main-container {
+        border-radius: 0px;
+        background-color: white;
+        --tw-shadow: 0
+    }
+    .signup-login-mobile {
+        display: block;
+    }
+}

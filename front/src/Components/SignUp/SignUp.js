@@ -1,12 +1,37 @@
 import './style.css';
-import React, { useState } from 'react';
+import React, { useState,useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Row, Col, Input, Button } from 'reactstrap';
+import axios from "axios";
 
-
-const SignUp = () => {
+const SignUp = () =>  {
     const [level, setLevel] = useState(1);
     const textStyle = " fw-bold fs-5 ";
+    const [name,setName]=useState("");
+    const [email,setEmail]=useState("");
+    const [phoneno,setPhoneno]=useState("");
+    const [password,setPassword]=useState("");
+    const [address,setAddress]=useState("");
+	
+    const handleClick = async(e) => {
+		
+			const user={
+				name:name, 
+				email:email,
+				password:password,
+                address:address,
+                phoneno:phoneno
+			}
+            console.log(user);
+			try{
+				await axios.post("/auth/signup",user);
+			}
+			catch(err)
+			{
+				console.log(err);
+			}
+		
+	};
     return (
         <React.Fragment>
             <Container className="mt-5">
@@ -18,13 +43,13 @@ const SignUp = () => {
                             </Col>
                             <Col className="text-start">Enter your Mobile number</Col>
                         </Row>
-                        <Row className={"signup-login-head-secondary mb-5 mt-5" + (level === 2 ? textStyle : "")}>
+                        {/* <Row className={"signup-login-head-secondary mb-5 mt-5" + (level === 2 ? textStyle : "")}>
                             <Col md="5" className="text-end">
                                 <i className="fas fa-dice-two"></i>
                             </Col>
                             <Col className="text-start">Enter OTP in your Mobile number</Col>
-                        </Row>
-                        <Row className={"signup-login-head-secondary mb-5 mt-5" + (level === 3 ? textStyle : "")}>
+                        </Row> */}
+                        <Row className={"signup-login-head-secondary mb-5 mt-5" + (level === 2 ? textStyle : "")}>
                             <Col md="5" className="text-end">
                                 <i className="fas fa-dice-three"></i>
                             </Col>
@@ -44,90 +69,111 @@ const SignUp = () => {
                         </Link>
                     </Col>
                     <Col className="bg-bg-success auth-current-side text-center p-md-5 m-auto">
-                        {
-                            level === 1 ?
-                                <React.Fragment>
+                        <form onSubmit={handleClick}>
                                     <Col md="" className="Signup-Header-Text mb-5">
                                         Create Account
                                     </Col>
-                                    <Col>
+                                    {/* <Col>
                                         <Input
                                             className="p-3 mb-5"
                                             name="mobile"
                                             type="text"
-                                            placeholder="Enter mobile number" />
+                                            placeholder="Enter mobile number"
+                                            ref={phoneno}
+                                             />
                                         <Button className="btn" onClick={() => setLevel(level + 1)}>Enter</Button>
                                         <div className="signup-login-mobile mt-4">
                                             Already an user <a href="/login"><u>login</u></a> here
                                         </div>
-                                    </Col>
-                                </React.Fragment> :
-                                level === 2 ?
-                                    <React.Fragment>
-                                        <Col className="Signup-Header-Text mb-5">
-                                            Enter OTP
+                                    </Col> */}
+                               
+{/*                                 
+                                    // <React.Fragment>
+                                    //     <Col className="Signup-Header-Text mb-5">
+                                    //         Enter OTP
+                                    //     </Col>
+                                    //     <Col>
+                                    //         <Row className="w-75 m-auto">
+                                    //             <Col>
+                                    //                 <Input className="OTP_Input" />
+                                    //             </Col>
+                                    //             <Col>
+                                    //                 <Input className="OTP_Input" />
+                                    //             </Col>
+                                    //             <Col>
+                                    //                 <Input className="OTP_Input" />
+                                    //             </Col>
+                                    //             <Col>
+                                    //                 <Input className="OTP_Input" />
+                                    //             </Col>
+                                    //             <Col>
+                                    //                 <Input className="OTP_Input" />
+                                    //             </Col>
+                                    //             <Col>
+                                    //                 <Input className="OTP_Input" />
+                                    //             </Col>
+                                    //         </Row>
+                                    //     </Col>
+                                    //     <Col>
+                                    //         <Row className="mt-5">
+                                    //             <Col>
+                                    //                 <Button className="btn" onClick={() => setLevel(level - 1)}> Change Number </Button>
+                                    //             </Col>
+                                    //             <Col>
+                                    //                 <Button className="btn" onClick={() => setLevel(level + 1)}>Submit</Button>
+                                    //             </Col>
+                                    //         </Row>
+                                    //     </Col>
+                                    // </React.Fragment> : */}
+                                    
+                                        <Col>
+                                        <Input
+                                            className="p-3 mb-5"
+                                            name="mobile"
+                                            type="text"
+                                            placeholder="Enter mobile number"
+                                            onChange={(e)=>{
+                                                setPhoneno(e.target.value);
+                                            }}
+                                             />
+                                        <Col>
+                                            <Input className="p-3 mb-4" placeholder="Name" type="text" 
+                                            onChange={(e)=>{
+                                                setName(e.target.value);
+                                            }}/>
                                         </Col>
                                         <Col>
-                                            <Row className="w-75 m-auto">
-                                                <Col>
-                                                    <Input className="OTP_Input" />
-                                                </Col>
-                                                <Col>
-                                                    <Input className="OTP_Input" />
-                                                </Col>
-                                                <Col>
-                                                    <Input className="OTP_Input" />
-                                                </Col>
-                                                <Col>
-                                                    <Input className="OTP_Input" />
-                                                </Col>
-                                                <Col>
-                                                    <Input className="OTP_Input" />
-                                                </Col>
-                                                <Col>
-                                                    <Input className="OTP_Input" />
-                                                </Col>
-                                            </Row>
+                                            <Input className="p-3 mb-4" placeholder="Email (optional)" type="email" 
+                                            onChange={(e)=>{
+                                                setEmail(e.target.value);
+                                            }} />
                                         </Col>
                                         <Col>
-                                            <Row className="mt-5">
-                                                <Col>
-                                                    <Button className="btn" onClick={() => setLevel(level - 1)}> Change Number </Button>
-                                                </Col>
-                                                <Col>
-                                                    <Button className="btn" onClick={() => setLevel(level + 1)}>Submit</Button>
-                                                </Col>
-                                            </Row>
-                                        </Col>
-                                    </React.Fragment> :
-                                    <React.Fragment>
-                                        <Col className="Signup-Header-Text mb-5">
-                                            Fill Basic Details
+                                            <Input className="p-3 mb-4" placeholder="Address"  type="text"
+                                            onChange={(e)=>{
+                                                setAddress(e.target.value);
+                                            }}/>
                                         </Col>
                                         <Col>
-                                            <Input className="p-3 mb-4" placeholder="Name" />
-                                        </Col>
-                                        <Col>
-                                            <Input className="p-3 mb-4" placeholder="Email (optional)" />
-                                        </Col>
-                                        <Col>
-                                            <Input className="p-3 mb-4" placeholder="Address" />
+                                            <Input className="p-3 mb-4" placeholder="Password" minLength="6" type="password" 
+                                            onChange={(e)=>{
+                                                setPassword(e.target.value);
+                                            }}/>
                                         </Col>
                                         <Row className="mt-5">
                                             <Col>
                                                 <Button className="btn" onClick={() => setLevel(level - 1)}>Go Back</Button>
                                             </Col>
                                             <Col>
-                                                <Button className="btn">Submit</Button>
+                                                <Button className="btn"type="submit">Submit</Button>
                                             </Col>
                                         </Row>
-                                    </React.Fragment>
-                        }
+                            </Col>
+                        </form>
                     </Col>
-                </Row>
-            </Container >
-        </React.Fragment >
+        </Row>
+    </Container >
+</React.Fragment >
     )
 }
-
 export default SignUp;

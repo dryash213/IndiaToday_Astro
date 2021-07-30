@@ -23,13 +23,18 @@ const SignUp = () =>  {
                 phoneno:phoneno
 			}
             console.log(user);
-			try{
-				await axios.post("/auth/signup",user);
-			}
-			catch(err)
-			{
-				console.log(err);
-			}
+			
+				await axios.post("/auth/signup",user)
+                .then(res=>{
+                    window.location.href="/login";
+                })
+                .catch(err=>{
+                    console.log(err);  
+                })
+                ;
+               
+			
+            
 		
 	};
     return (
@@ -69,7 +74,7 @@ const SignUp = () =>  {
                         </Link>
                     </Col>
                     <Col className="bg-bg-success auth-current-side text-center p-md-5 m-auto">
-                        <form onSubmit={handleClick}>
+                       
                                     <Col md="" className="Signup-Header-Text mb-5">
                                         Create Account
                                     </Col>
@@ -165,11 +170,11 @@ const SignUp = () =>  {
                                                 <Button className="btn" onClick={() => setLevel(level - 1)}>Go Back</Button>
                                             </Col>
                                             <Col>
-                                                <Button className="btn"type="submit">Submit</Button>
+                                                <Button className="btn" type="submit" onClick={handleClick}>Submit</Button>
                                             </Col>
                                         </Row>
                             </Col>
-                        </form>
+                        
                     </Col>
         </Row>
     </Container >

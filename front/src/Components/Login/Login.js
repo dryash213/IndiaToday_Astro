@@ -1,8 +1,30 @@
 import React from 'react';
+import  { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Row, Col, Input, Button } from 'reactstrap';
+import axios from "axios";
 
 const Login = () => {
+    
+    const [phoneno,setPhoneno]=useState("");
+    const [password,setPassword]=useState("");
+    
+    const handleClick = async(e) => {
+		
+    const userCredentials={
+        password:password,
+        phoneno:phoneno
+    }
+    
+        await axios.post("/auth/login",userCredentials)
+        .then(res=>{
+            window.location.href="/";
+        })
+        .catch(err=>{
+            console.log(err);  
+        })
+        
+    };
     return (
         <React.Fragment>
             <Container className="mt-5">
@@ -14,29 +36,32 @@ const Login = () => {
                                     Log In
                                 </Col>
                                 <Col>
-                                    <form>
                                         <Input
                                             className="p-3 mb-4"
                                             placeholder="Enter your mobile / Email"
-                                            name="username"
+                                            name="phoneno"
                                             type="text"
+                                            onChange={(e)=>{
+                                                setPhoneno(e.target.value);
+                                            }}
                                         />
                                         <Input
                                             className="p-3 mb-4"
                                             placeholder="Password"
                                             name="password"
                                             type="password"
+                                            onChange={(e)=>{
+                                                setPassword(e.target.value);
+                                            }}
                                         />
                                         <Row>
                                             <Col>
-
                                                 Forgot your Password?
-
                                             </Col>
                                         </Row>
 
-                                        <Button className="btn mt-5">Log In</Button>
-                                    </form>
+                                        <Button className="btn mt-5" type="submit" onClick={handleClick}>Log In</Button>
+                                    
                                     <div className="signup-login-mobile mt-4">
                                         New to FinBook? <a href="/signup"><u>Sign Up</u></a>
                                     </div>

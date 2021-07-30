@@ -3,7 +3,7 @@ import "./BillSplit.css"
 const splitter=()=>{
     return (
         <>
-            
+           <h1>Hy there</h1> 
         </>
     )
 }

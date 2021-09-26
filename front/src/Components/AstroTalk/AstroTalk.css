@@ -1,0 +1,21 @@
+.head{
+    font-size: 38px;
+}
+.topheadbar{
+    margin-top: 20px;
+}
+.topsearch{
+    text-align: center;
+}
+.searchbar{
+    margin-top: 20px;
+    width:50%;
+    height:35px;
+    background-color: aliceblue;
+    border-radius: 30px;
+    align-items: center;
+    
+}
+.sort-list{
+    margin-top: 20px;
+}

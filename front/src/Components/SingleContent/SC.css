@@ -1,0 +1,18 @@
+.asddsa{
+    margin-top: 20px;
+    border-radius: 10%;
+    background-color: rgb(216, 89, 38);
+    color: white;
+    
+}
+.cardContainer3{
+    width: 300px;
+    height: 280px;
+    display: inline-block;
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-top: 50px;
+}
+.cardimg3{
+    padding-top: 6px;
+}

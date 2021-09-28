@@ -1,0 +1,26 @@
+.cardButton{
+    float: right;
+}
+.cardSkills{
+    font-size: 13px;
+    font-weight: 350;
+}
+.cardContainer{
+    height:365px;
+    justify-content: space-around;
+    max-width: 275px;
+
+}
+.cardimg2{
+    padding-top: 2em;
+    padding-left: 2em;
+    width: 60px;
+}
+.cardimg3{
+    width: 60px;
+    padding-top: -50px;
+    border-radius: 50%;
+}
+.backfooter{
+    background-color: rgb(243, 238, 243);
+}

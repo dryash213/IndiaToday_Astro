@@ -3,11 +3,15 @@ import  { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Row, Col, Input, Button, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import axios from "axios";
+import { Nav, NavItem, NavLink } from 'reactstrap';
+
 import "./AstroTalk.css"
+
 import {astro} from "../../Dummydata/Dummydata"
 import SingleContent from "../SingleContent/SingleContent"
 const AstroTalk = () => {
     // const count = useState(0);
+    console.log(astro)
     const [SearchItem,setSearchItem]=useState("");
     const [count,setCount]=useState("");
     const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -47,9 +51,10 @@ const AstroTalk = () => {
     return (
         <React.Fragment>
              <Container>
+                 <Button><NavLink href="/">Home</NavLink></Button>
                 <Row className="topheadbar">
                     <Col md="12" className="text-center">
-                        <div className="head"><b>Welcome to Home</b></div>
+                        <div className="head"><b>Talk to Astro</b></div>
                     </Col>
 
                     <Col  md="8" className="topsearch">
@@ -84,7 +89,8 @@ const AstroTalk = () => {
 
                 </Row>
             </Container>
-            <div className="Astro-List">
+            <Container className="Astro-List ">
+            <Row>
             {astro.filter((val)=>{
                 if(SearchItem=="")
                 return val;
@@ -95,7 +101,8 @@ const AstroTalk = () => {
                 <SingleContent key={index} idx={p.id} astrouser={p}/>
                 </>
             ))} 
-            </div>
+           </Row>
+            </Container>
 
         </React.Fragment >
     )

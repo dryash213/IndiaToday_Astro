@@ -2,3 +2,50 @@
     background-color: azure;
     height: 100px;
 }
+.container2{
+    margin-top: 80px;
+}
+.askcontainer{
+    
+    margin-top: 60px;
+}
+
+.askbar{
+    margin-top: 30px;
+    background-color: aliceblue;
+    height: 150px;
+}
+.askfooter{
+    padding-top: 5px;
+}
+.reportimg{
+    width:90%;
+    opacity: 40%;
+}
+.reportfooter{
+    background-color: black;
+    color: white;
+    font-weight: 500;
+}
+
+.bottom{
+    position: absolute;
+    bottom: 8px;
+    background-color: black;
+    min-height: 40px;
+    min-width:90%;
+    opacity: 70%;
+    color: white;
+  }
+
+.bottom-left {
+    position: absolute;
+    left: 16px;
+    padding: 5px;
+  }
+  .bottom-right {
+      position: absolute;
+    right: 16px;
+    opacity: 1;
+    padding-top: 5px;
+  }

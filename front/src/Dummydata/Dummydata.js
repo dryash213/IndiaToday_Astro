@@ -9,14 +9,16 @@ export const astro =[
     "profliePicUrl":null,
     "experience":1.0,
     "languages":[
+       'English','Hindi','Sanskrit'
        
     ],
-    "minimumCallDuration":5,
-    "minimumCallDurationCharges":70.0,
-    "additionalPerMinuteCharges":10.0,
+    "minimumCallDuration":8,
+    "minimumCallDurationCharges":80.0,
+    "additionalPerMinuteCharges":15.0,
     "isAvailable":true,
     "rating":null,
     "skills":[
+       'vedic astrology'
        
     ],
     "isOnCall":false,
@@ -47,22 +49,74 @@ export const astro =[
  },
  {
    "id":32,
-   "urlSlug":"rakesh-kiran",
+   "urlSlug":"soumya-kiran",
    "namePrefix":null,
-   "firstName":"randi",
-   "lastName":"saxena",
+   "firstName":"Soumya",
+   "lastName":"ranjan",
    "aboutMe":"Hello I am here",
    "profliePicUrl":null,
-   "experience":3.0,
+   "experience":9.0,
    "languages":[
+      'English','Hindi','Sanskrit'
       
    ],
-   "minimumCallDuration":6,
-   "minimumCallDurationCharges":60.0,
-   "additionalPerMinuteCharges":10.0,
+   "minimumCallDuration":4,
+   "minimumCallDurationCharges":90.0,
+   "additionalPerMinuteCharges":82.0,
    "isAvailable":true,
    "rating":null,
    "skills":[
+      
+      'fortune astrology',
+      'vastu'
+   ],
+   "isOnCall":false,
+   "images":{
+      "large":{
+         "imageUrl":"",
+         "id":92
+      },
+      "medium":{
+         "imageUrl":"https://tak-astrotak-av-dev.s3.ap-south-1.amazonaws.com/astro-images/agents/1.png",
+         "id":123
+      }
+   },
+   "availability":{
+      "days":[
+         "MON",
+         "WED",
+         "THU",
+         "FRI"
+      ],
+      "slot":{
+         "toFormat":"PM",
+         "fromFormat":"AM",
+         "from":"10",
+         "to":"7"
+      }
+   }
+},
+{
+   "id":33,
+   "urlSlug":"anshika-saxena",
+   "namePrefix":null,
+   "firstName":"Hansa",
+   "lastName":"ranjan",
+   "aboutMe":"Hello I am here",
+   "profliePicUrl":null,
+   "experience":4.0,
+   "languages":[
+      'English','Hindi','Sanskrit'
+      
+   ],
+   "minimumCallDuration":5,
+   "minimumCallDurationCharges":79.0,
+   "additionalPerMinuteCharges":60.0,
+   "isAvailable":true,
+   "rating":null,
+   "skills":[
+      'vedic astrology',
+      'vastu'
       
    ],
    "isOnCall":false,
@@ -91,6 +145,41 @@ export const astro =[
       }
    }
 },
+{
+  "id":32,
+  "urlSlug":"rakesh-kiran",
+  "namePrefix":null,
+  "firstName":"Ishita ",
+  "lastName":"Shrivastava",
+  "aboutMe":"Hello I am here",
+  "profliePicUrl":null,
+  "experience":3.0,
+  "languages":[
+   'English','Hindi','Sanskrit'
+  ],
+  "minimumCallDuration":6,
+  "minimumCallDurationCharges":60.0,
+  "additionalPerMinuteCharges":10.0,
+  "isAvailable":true,
+  "rating":null,
+  "skills":[
+     
+      'vedic astrology',
+      'vastu',
+      'fortune Telling'
+  ],
+  "isOnCall":false,
+  "images":{
+     "large":{
+        "imageUrl":"",
+        "id":92
+     },
+     "medium":{
+        "imageUrl":"https://tak-astrotak-av-dev.s3.ap-south-1.amazonaws.com/astro-images/agents/1.png",
+        "id":123
+     }
+  }
+}
 ];
 export const Questions=[
    {
@@ -235,4 +324,61 @@ export const Questions=[
          }
       ]
    }
+];
+export const astroimg=[
+   {
+      "backgroundimage":"static/asas.jfif",
+      "price":"99"
+   },
+   {
+      "backgroundimage":"static/asas.jfif",
+      "price":"51"
+   },
+   {
+      "backgroundimage":"static/asas.jfif",
+      "price":"125"
+   },
+   {
+      "backgroundimage":"static/asas.jfif",
+      "price":"87"
+   },
+   {
+      "backgroundimage":"static/asas.jfif",
+      "price":"68"
+   },
+];
+
+export const aboutcard=[
+   {
+      "name":"Gagan Deep Agarwal",
+      "place":"Bhopal",
+      "profileimg":"static/asas.jfif",
+      "cardtext":"Lascussed with Mr Arving and im  He hvery good knowledge and understanding correctly. My questions are clearly answered and want to contact with him father for iny famly as well. Thank you for your support"
+   },
+   {
+      "name":"Anurag",
+      "place":"chandigarh",
+      "profileimg":"static/asas.jfif",
+      "cardtext":"Thank you so much dearest proud to be associated with guidance seewer am really ami callygrateful to you and very hap services rendered to me, you  nefmily thambons on the Love you lots"
+   },
+   {
+      "name":"Dev swami",
+      "place":"Kolkata",
+      "profileimg":"static/asas.jfif",
+      "cardtext":"Lascussed with Mr Arving and im very sat is dearest proud to be associated with guidance seewer am really ami callygrateful to you and very hap services rendered to me, you  nefmily thambons on the Love you lots"
+   },
+   ,
+   {
+      "name":"Romit shrivastav",
+      "place":"chandigarh",
+      "profileimg":"static/asas.jfif",
+      "cardtext":"Thank you so much dearest proud to be associated with guidance seewer am really ami callygrateful to you and very hap services rendered to me, you  nefmily thambons on the Love you lots"
+   },
+   {
+      "name":"Ankit Bharadwaj",
+      "place":"Agra",
+      "profileimg":"static/asas.jfif",
+      "cardtext":"Lascussed with Mr Arving and im very sat is dearest proud to be associated with guidance seewer am really ami callygrateful to you and very hap services rendered to me, you  nefmily thambons on the Love you lots"
+   }
+
 ];
